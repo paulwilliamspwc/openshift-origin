@@ -72,6 +72,10 @@ EOF
 
 echo $(date) " - Installing Azure CLI"
 
+# For Centos 7.3 or below
+yum install https://kojipkgs.fedoraproject.org//packages/http-parser/2.7.1/3.e17/x86_64/http-parser-2.7.1-3.e17.x86_64.rpm
+# End for Centos 7.3 or below
+
 yum -y --enablerepo=epel install nodejs
 
 npm install -g azure-cli
